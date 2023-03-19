@@ -9,6 +9,7 @@ import { SegmentedToggle } from "../components/Color";
 import { HeroImageBackground } from "../components/Herosection";
 import { FooterLinks } from "../components/Footer";
 import { FeaturesCards } from "../components/Feature";
+import { AuthenticationTitle } from "../components/logincomp";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,7 +43,7 @@ const links = [
   },
 ];
 
-export default function Home() {
+export default function Dashboard() {
   return (
     <>
       <Head>
@@ -51,13 +52,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <NavbarSimple /> */}
-      <HeaderMegaMenu />
-      <HeroImageBackground />
-      {/* <SegmentedToggle /> */}
-      <FeaturesCards />
-      <FaqSimple />
-      <FooterLinks data={links} />
+      <NavbarSimple />
     </>
   );
 }
