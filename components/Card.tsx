@@ -80,7 +80,7 @@ export function BadgeCard({ image, title, description, country, badges }: BadgeC
 
       <Card.Section className={classes.section}>
         <Text mt="md" className={classes.label} c="dimmed">
-          Perfect for you, if you enjoy
+          Report Tage
         </Text>
         <Group spacing={7} mt={5}>
           {features}
@@ -88,7 +88,7 @@ export function BadgeCard({ image, title, description, country, badges }: BadgeC
       </Card.Section>
 
       <Group mt="xs">
-        <Button radius="md" style={{ flex: 1 }} variant="default">
+        <Button radius="md" style={{ flex: 1 }} variant="default" className="bg-blue-500 text-white hover:text-black">
           Show details
         </Button>
         <ActionIcon variant="default" radius="md" size={36}>

@@ -8,39 +8,32 @@ import { auth } from "@/utils/firebase";
 import { Button, Stack } from "@mantine/core";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-const MedicalReports: CustomNextPage = () => {
+const LabReports: CustomNextPage = () => {
   const [user, loading, error] = useAuthState(auth);
 
   return (
-    <PageContainer title="Medical Reports" fluid>
+    <PageContainer title="Lab Reports" fluid>
       <Stack spacing="xl">
-        <PageContent title="Medical Reports">
+        <PageContent title="Lab Reports">
           <div className="flex w-full gap-2">
-          <BadgeCard
+            <BadgeCard
               image={"https://avatars.githubusercontent.com/u/92779466?v=4"}
               title={"Adam"}
-              country={"Date: 12/09/2023"}
+              country={"India"}
               description={"Hello my name is adam"}
               badges={[{ emoji: "hehe", label: "patient" }]}
             />
             <BadgeCard
               image={"https://avatars.githubusercontent.com/u/92779466?v=4"}
               title={"Adam"}
-              country={"Date: 12/09/2023"}
+              country={"India"}
               description={"Hello my name is adam"}
               badges={[{ emoji: "hehe", label: "patient" }]}
             />
             <BadgeCard
               image={"https://avatars.githubusercontent.com/u/92779466?v=4"}
               title={"Adam"}
-              country={"Date: 12/09/2023"}
-              description={"Hello my name is adam"}
-              badges={[{ emoji: "hehe", label: "patient" }]}
-            />
-            <BadgeCard
-              image={"https://avatars.githubusercontent.com/u/92779466?v=4"}
-              title={"Adam"}
-              country={"Date: 12/09/2023"}
+              country={"India"}
               description={"Hello my name is adam"}
               badges={[{ emoji: "hehe", label: "patient" }]}
             />
@@ -59,6 +52,6 @@ const MedicalReports: CustomNextPage = () => {
   );
 };
 
-MedicalReports.getLayout = DashboardLayout;
+LabReports.getLayout = DashboardLayout;
 
-export default MedicalReports;
+export default LabReports;

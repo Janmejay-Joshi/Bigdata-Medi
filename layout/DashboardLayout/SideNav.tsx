@@ -107,9 +107,9 @@ const useStyles = createStyles<string, { collapsed?: boolean }>(
 );
 
 const data = [
-  { link: "/patient/dashboard", label: "Dashboard", icon: IconUser },
-  { link: "/patient/medicalreports", label: "Medical Reports", icon: IconReceipt2 },
-  { link: "/patient/labreports", label: "Lab Reports", icon: IconFingerprint },
+  { link: "dashboard", label: "Dashboard", icon: IconUser },
+  { link: "medicalreports", label: "Medical Reports", icon: IconReceipt2 },
+  { link: "labreports", label: "Lab Reports", icon: IconFingerprint },
 ];
 
 export const SideNav: FC<{ className?: string }> = ({ className }) => {

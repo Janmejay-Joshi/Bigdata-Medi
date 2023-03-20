@@ -19,21 +19,21 @@ const LabReports: CustomNextPage = () => {
             <BadgeCard
               image={"https://avatars.githubusercontent.com/u/92779466?v=4"}
               title={"Adam"}
-              country={"India"}
+              country={"Date: 12/09/2023"}
               description={"Hello my name is adam"}
               badges={[{ emoji: "hehe", label: "patient" }]}
             />
             <BadgeCard
               image={"https://avatars.githubusercontent.com/u/92779466?v=4"}
               title={"Adam"}
-              country={"India"}
+              country={"Date: 12/09/2023"}
               description={"Hello my name is adam"}
               badges={[{ emoji: "hehe", label: "patient" }]}
             />
             <BadgeCard
               image={"https://avatars.githubusercontent.com/u/92779466?v=4"}
               title={"Adam"}
-              country={"India"}
+              country={"Date: 12/09/2023"}
               description={"Hello my name is adam"}
               badges={[{ emoji: "hehe", label: "patient" }]}
             />

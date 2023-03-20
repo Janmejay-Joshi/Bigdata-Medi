@@ -16,31 +16,31 @@ const MedicalReports: CustomNextPage = () => {
       <Stack spacing="xl">
         <PageContent title="Medical Reports">
           <div className="flex w-full gap-2">
-          <BadgeCard
+            <BadgeCard
               image={"https://avatars.githubusercontent.com/u/92779466?v=4"}
               title={"Adam"}
-              country={"Date: 12/09/2023"}
+              country={"India"}
               description={"Hello my name is adam"}
               badges={[{ emoji: "hehe", label: "patient" }]}
             />
             <BadgeCard
               image={"https://avatars.githubusercontent.com/u/92779466?v=4"}
               title={"Adam"}
-              country={"Date: 12/09/2023"}
+              country={"India"}
               description={"Hello my name is adam"}
               badges={[{ emoji: "hehe", label: "patient" }]}
             />
             <BadgeCard
               image={"https://avatars.githubusercontent.com/u/92779466?v=4"}
               title={"Adam"}
-              country={"Date: 12/09/2023"}
+              country={"India"}
               description={"Hello my name is adam"}
               badges={[{ emoji: "hehe", label: "patient" }]}
             />
             <BadgeCard
               image={"https://avatars.githubusercontent.com/u/92779466?v=4"}
               title={"Adam"}
-              country={"Date: 12/09/2023"}
+              country={"India"}
               description={"Hello my name is adam"}
               badges={[{ emoji: "hehe", label: "patient" }]}
             />
