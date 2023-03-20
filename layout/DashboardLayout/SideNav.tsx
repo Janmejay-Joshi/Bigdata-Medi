@@ -107,9 +107,9 @@ const useStyles = createStyles<string, { collapsed?: boolean }>(
 );
 
 const data = [
-  { link: "", label: "Dashboard", icon: IconUser },
-  { link: "", label: "Medical Reports", icon: IconReceipt2 },
-  { link: "", label: "Lab Reports", icon: IconFingerprint },
+  { link: "/patient/dashboard", label: "Dashboard", icon: IconUser },
+  { link: "/patient/medicalreports", label: "Medical Reports", icon: IconReceipt2 },
+  { link: "/patient/labreports", label: "Lab Reports", icon: IconFingerprint },
 ];
 
 export const SideNav: FC<{ className?: string }> = ({ className }) => {
@@ -118,20 +118,19 @@ export const SideNav: FC<{ className?: string }> = ({ className }) => {
   const [active, setActive] = useState("Billing");
 
   const links = data.map((item) => (
-    <a
+    <Link
       className={cx(classes.link, {
         [classes.linkActive]: item.label === active,
       })}
       href={item.link}
       key={item.label}
       onClick={(event) => {
-        event.preventDefault();
         setActive(item.label);
       }}
     >
       <item.icon className={classes.linkIcon} stroke={1.5} />
       <span>{item.label}</span>
-    </a>
+    </Link>
   ));
 
   return (

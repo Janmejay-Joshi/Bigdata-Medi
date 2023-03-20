@@ -8,13 +8,12 @@ import { auth } from "@/utils/firebase";
 import { Button, Stack } from "@mantine/core";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-const Dashboard: CustomNextPage = () => {
+const MedicalReports: CustomNextPage = () => {
   const [user, loading, error] = useAuthState(auth);
 
   return (
-    <PageContainer title="Account" fluid>
+    <PageContainer title="Medical Reports" fluid>
       <Stack spacing="xl">
-        <PageContent title="User Details">{user?.displayName}</PageContent>
         <PageContent title="Medical Reports">
           <div className="flex w-full gap-2">
             <BadgeCard
@@ -55,44 +54,11 @@ const Dashboard: CustomNextPage = () => {
             </Button>
           </div>
         </PageContent>
-        <PageContent title="Lab Reports">
-          <div className="flex w-full gap-2">
-            <BadgeCard
-              image={"https://avatars.githubusercontent.com/u/92779466?v=4"}
-              title={"Adam"}
-              country={"India"}
-              description={"Hello my name is adam"}
-              badges={[{ emoji: "hehe", label: "patient" }]}
-            />
-            <BadgeCard
-              image={"https://avatars.githubusercontent.com/u/92779466?v=4"}
-              title={"Adam"}
-              country={"India"}
-              description={"Hello my name is adam"}
-              badges={[{ emoji: "hehe", label: "patient" }]}
-            />
-            <BadgeCard
-              image={"https://avatars.githubusercontent.com/u/92779466?v=4"}
-              title={"Adam"}
-              country={"India"}
-              description={"Hello my name is adam"}
-              badges={[{ emoji: "hehe", label: "patient" }]}
-            />
-          </div>
-          <div className="p-8 flex justify-center ">
-            <Button
-              variant="default"
-              className="bg-blue-500 text-white hover:text-black"
-            >
-              Show more
-            </Button>
-          </div>
-        </PageContent>
       </Stack>
     </PageContainer>
   );
 };
 
-Dashboard.getLayout = DashboardLayout;
+MedicalReports.getLayout = DashboardLayout;
 
-export default Dashboard;
+export default MedicalReports;
