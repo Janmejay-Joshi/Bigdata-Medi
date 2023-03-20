@@ -9,7 +9,7 @@ import { SegmentedToggle } from "../components/Color";
 import { HeroImageBackground } from "../components/Herosection";
 import { FooterLinks } from "../components/Footer";
 import { FeaturesCards } from "../components/Feature";
-import { AuthenticationTitle } from "../components/logincomp";
+import { Signincomp } from "@/components/Signincomp";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,7 +43,7 @@ const links = [
   },
 ];
 
-export default function SignIn() {
+export default function Register() {
   return (
     <>
       <Head>
@@ -54,7 +54,7 @@ export default function SignIn() {
       </Head>
       {/* <NavbarSimple /> */}
       <HeaderMegaMenu />
-      <AuthenticationTitle />
+      <Signincomp />
       <FooterLinks data={links} />
     </>
   );

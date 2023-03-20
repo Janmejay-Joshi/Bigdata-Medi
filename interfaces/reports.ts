@@ -1,7 +1,10 @@
 export interface MedicineReportInterface {
   timestamp: Date;
 
-  diagnosis?: string;
+  doctor_id: string;
+  report_id: string;
+
+  diagnosis: string;
   medicines: [
     {
       name: string;
@@ -10,6 +13,7 @@ export interface MedicineReportInterface {
     }
   ];
   precautions: [string];
+  tags: [string];
 }
 
 export interface LabReportInterface {

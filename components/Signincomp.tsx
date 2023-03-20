@@ -14,6 +14,8 @@ import {
   createStyles,
   rem,
 } from "@mantine/core";
+import { useForm, isEmail, isNotEmpty } from "@mantine/form";
+import { useEffect } from "react";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -37,6 +39,17 @@ const useStyles = createStyles((theme) => ({
 
 export function Signincomp() {
   const { classes } = useStyles();
+  const form = useForm({
+    validate: {
+      email: isEmail("Invalid email"),
+      name: isNotEmpty("Name cannot be empty"),
+    },
+  });
+
+  useEffect(() => {
+    console.log(form.values, form.isValid());
+  });
+
   return (
     <Box>
       <Container size={420} my={40}>
@@ -57,18 +70,25 @@ export function Signincomp() {
         </Text>
 
         <Paper withBorder shadow="md" p={30} mt={30} radius="md">
-          <TextInput label="Name" placeholder="Andrew tatte" required />
+          <TextInput
+            label="Name"
+            placeholder="Andrew tatte"
+            required
+            {...form.getInputProps("name")}
+          />
           <TextInput
             label="Email"
             placeholder="you@mantine.dev"
             mt="md"
             required
+            {...form.getInputProps("email")}
           />
           <TextInput
             label="Age"
             placeholder="XX"
             mt="md"
             required
+            {...form.getInputProps("age")}
           />
           <Select
             mt="md"
@@ -77,6 +97,7 @@ export function Signincomp() {
             placeholder="Pick one"
             label="Your user type"
             classNames={classes}
+            {...form.getInputProps("type")}
           />
           <Select
             mt="md"
@@ -85,6 +106,7 @@ export function Signincomp() {
             placeholder="Pick one"
             label="Your gender"
             classNames={classes}
+            {...form.getInputProps("gender")}
           />
           <PasswordInput
             label="Password"

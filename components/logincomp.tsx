@@ -12,7 +12,7 @@ import {
   Box,
 } from "@mantine/core";
 
-export function AuthenticationTitle() {
+export function AuthenticationForm() {
   return (
     <Box pb={100}>
       <Container size={420} my={40}>
