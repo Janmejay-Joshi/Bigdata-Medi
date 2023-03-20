@@ -1,5 +1,4 @@
-import { FC, useEffect } from "react";
-import type { CustomLayout } from "next";
+import { FC, ReactNode, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { useDisclosure } from "@mantine/hooks";
@@ -14,18 +13,14 @@ import {
 import { Menu2 } from "tabler-icons-react";
 
 import { LayoutErrorBoundary } from "../LayoutErrorBoundary";
-
-const Header = dynamic(async () => {
-  const { Header } = await import("./Header");
-  return Header;
-});
+import { CustomNextPage } from "@/interfaces/customNext";
 
 const SideNav = dynamic(async () => {
   const { SideNav } = await import("./SideNav");
   return SideNav;
 });
 
-export const DashboardLayout: CustomLayout = (page) => {
+export const DashboardLayout = (page: ReactNode) => {
   const [opened, handlers] = useDisclosure(false);
 
   return (
@@ -86,7 +81,7 @@ const DrawerNav: FC<{ opened: boolean; handleClose: () => void }> = ({
       onClose={handleClose}
       size="auto"
       withCloseButton={false}
-      sx={{ position: "relative" }}
+      style={{ position: "relative" }}
     >
       <CloseButton
         size="xl"

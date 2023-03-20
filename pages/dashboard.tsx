@@ -6,8 +6,9 @@ import { PageContainer } from "./component/PageContainer";
 import { showNotification } from "@mantine/notifications";
 import { auth } from "@/utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { CustomNextPage } from "@/interfaces/customNext";
 
-const Dashboard: NextPage = () => {
+const Dashboard: CustomNextPage = () => {
   const [user, loading, error] = useAuthState(auth);
 
   return (
