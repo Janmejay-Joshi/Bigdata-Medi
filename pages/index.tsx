@@ -1,14 +1,10 @@
-import Head from "next/head";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import { NavbarSimple } from "../components/Sidebar";
-import { FaqSimple } from "../components/Questions";
-import { HeaderMegaMenu } from "../components/Navbar";
-import { SegmentedControl } from "@mantine/core";
-import { SegmentedToggle } from "../components/Color";
-import { HeroImageBackground } from "../components/Herosection";
-import { FooterLinks } from "../components/Footer";
+import Head from "next/head";
 import { FeaturesCards } from "../components/Feature";
+import { FooterLinks } from "../components/Footer";
+import { HeroImageBackground } from "../components/Herosection";
+import { HeaderMegaMenu } from "../components/Navbar";
+import { FaqSimple } from "../components/Questions";
 
 const inter = Inter({ subsets: ["latin"] });
 

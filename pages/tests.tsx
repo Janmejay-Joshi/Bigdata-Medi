@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
 import { auth } from "@/utils/firebase";
-import { useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { useRouter } from "next/router";
 import { initUser } from "@/utils/firebase/users";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 
 type Props = {};
 

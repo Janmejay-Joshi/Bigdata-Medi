@@ -1,12 +1,11 @@
-import { Button, Stack, Table } from "@mantine/core";
-import type { NextPage } from "next";
-import { DashboardLayout } from "@/layout";
-import { PageContent } from "@/components/PageContent";
 import { PageContainer } from "@/components/PageContainer";
-import { showNotification } from "@mantine/notifications";
-import { auth } from "@/utils/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
+import { PageContent } from "@/components/PageContent";
 import { CustomNextPage } from "@/interfaces/customNext";
+import { DashboardLayout } from "@/layout";
+import { auth } from "@/utils/firebase";
+
+import { Stack } from "@mantine/core";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const Dashboard: CustomNextPage = () => {
   const [user, loading, error] = useAuthState(auth);
