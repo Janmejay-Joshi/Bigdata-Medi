@@ -12,6 +12,7 @@ import {
   IconLogout,
 } from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
+import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -87,7 +88,7 @@ export function NavbarSimple() {
       className={cx(classes.link, { [classes.linkActive]: item.label === active })}
       href={item.link}
       key={item.label}
-      onClick={(event) => {
+      onClick={(event) => { 
         event.preventDefault();
         setActive(item.label);
       }}
@@ -108,15 +109,15 @@ export function NavbarSimple() {
       </Navbar.Section>
 
       <Navbar.Section className={classes.footer}>
-        <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
+        <Link href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
           <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
           <span>Change account</span>
-        </a>
+        </Link>
 
-        <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
+        <Link href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
           <IconLogout className={classes.linkIcon} stroke={1.5} />
           <span>Logout</span>
-        </a>
+        </Link>
       </Navbar.Section>
     </Navbar>
   );

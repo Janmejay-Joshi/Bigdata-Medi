@@ -179,7 +179,7 @@ export function HeaderMegaMenu() {
               withinPortal
             >
               <HoverCard.Target>
-                <a href="#" className={classes.link}>
+                <Link href="#" className={classes.link}>
                   <Center inline>
                     <Box component="span" mr={5}>
                       Features
@@ -189,7 +189,7 @@ export function HeaderMegaMenu() {
                       color={theme.fn.primaryColor()}
                     />
                   </Center>
-                </a>
+                </Link>
               </HoverCard.Target>
 
               <HoverCard.Dropdown sx={{ overflow: "hidden" }}>
@@ -225,12 +225,12 @@ export function HeaderMegaMenu() {
                 </div>
               </HoverCard.Dropdown>
             </HoverCard>
-            <a href="#" className={classes.link}>
+            <Link href="#" className={classes.link}>
               Learn
-            </a>
-            <a href="#" className={classes.link}>
+            </Link>
+            <Link href="#" className={classes.link}>
               Academy
-            </a>
+            </Link>
           </Group>
 
           <Group className={classes.hiddenMobile}>
@@ -277,12 +277,12 @@ export function HeaderMegaMenu() {
             </Center>
           </UnstyledButton>
           <Collapse in={linksOpened}>{links}</Collapse>
-          <a href="#" className={classes.link}>
+          <Link href="#" className={classes.link}>
             Learn
-          </a>
-          <a href="#" className={classes.link}>
+          </Link>
+          <Link href="#" className={classes.link}>
             Academy
-          </a>
+          </Link>
 
           <Divider
             my="sm"
