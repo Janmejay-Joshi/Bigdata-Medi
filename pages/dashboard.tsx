@@ -1,8 +1,8 @@
 import { Button, Stack, Table } from "@mantine/core";
 import type { NextPage } from "next";
-import { DashboardLayout } from "./layout";
-import { PageContent } from "./component/PageContent";
-import { PageContainer } from "./component/PageContainer";
+import { DashboardLayout } from "@/layout";
+import { PageContent } from "@/components/PageContent";
+import { PageContainer } from "@/components/PageContainer";
 import { showNotification } from "@mantine/notifications";
 import { auth } from "@/utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
