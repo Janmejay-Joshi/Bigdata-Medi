@@ -9,7 +9,7 @@ import { SegmentedToggle } from "../components/Color";
 import { HeroImageBackground } from "../components/Herosection";
 import { FooterLinks } from "../components/Footer";
 import { FeaturesCards } from "../components/Feature";
-import { AuthenticationTitle } from "../components/logincomp";
+import { AuthenticationForm } from "../components/logincomp";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -54,7 +54,7 @@ export default function SignIn() {
       </Head>
       {/* <NavbarSimple /> */}
       <HeaderMegaMenu />
-      <AuthenticationTitle />
+      <AuthenticationForm />
       <FooterLinks data={links} />
     </>
   );
