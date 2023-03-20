@@ -8,9 +8,6 @@ export const getUserHistory = async (user_id: string) => {
   return data.data();
 };
 
-export const addUserMedicalHistory = async (
-  user_id: string,
-  data: MedicineReportInterface
-) => {
+export const addUserMedicalHistory = async (user_id: string, data: any) => {
   await setDoc(doc(db, "reports", user_id), { medical: arrayUnion(data) });
 };

@@ -3,8 +3,10 @@ import { auth } from "@/utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from "next/router";
 import { initUser } from "@/utils/firebase/users";
-import { Button, Paper, TextInput } from "@mantine/core";
+import { Button, Paper, Select, TextInput } from "@mantine/core";
 import { DashboardLayout } from "@/layout";
+
+import { addUserMedicalHistory } from "@/utils/firebase/reports";
 
 //forms
 import { useForm } from "@mantine/form";
@@ -19,8 +21,8 @@ const Testform = (props: Props) => {
 
   useEffect(() => {
     if (!user && !loading) router.push("/tests");
+    console.log(user?.uid);
   }, [user, router, loading]);
-  const row = [];
 
   const form = useForm({
     initialValues: {
@@ -36,6 +38,8 @@ const Testform = (props: Props) => {
 
     validate: {},
   });
+
+  form.values;
 
   return (
     <div>
@@ -65,21 +69,22 @@ const Testform = (props: Props) => {
               // key={index}
               placeholder="Name"
               label="Name"
-              {...form.getInputProps("name")}
+              {...form.getInputProps("medicines.name}")}
               withAsterisk
             />
             <TextInput
               // key={index}
               placeholder="Dosage"
               label="Dosage"
-              {...form.getInputProps("dosage")}
+              {...form.getInputProps("medicines.dosage")}
               withAsterisk
             />
-            <TextInput
+            <Select
               // key={index}
               placeholder="Duration"
               label="Duration"
-              {...form.getInputProps("duration")}
+              data={["M", "E", "N", "ME", "MN", "EN", "MEN"]}
+              {...form.getInputProps("medicines.duration")}
               withAsterisk
             />
           </Paper>
@@ -87,6 +92,15 @@ const Testform = (props: Props) => {
       })}
       <Button onClick={() => setMedVal(medVal + 1)} mt={20} variant="default">
         Add More Medicines
+      </Button>
+      <br />
+      <Button
+        onClick={() => {
+          if (user) addUserMedicalHistory(user.uid, form.values);
+        }}
+        variant="default"
+      >
+        SUBMIT
       </Button>
     </div>
   );
