@@ -46,8 +46,24 @@ export function AuthenticationForm() {
               Forgot password?
             </Anchor>
           </Group>
-          <Button fullWidth mt="xl">
+          <Button
+            fullWidth
+            mt="xl"
+            variant="default"
+            className="bg-blue-500 text-white hover:text-black"
+          >
             Login
+          </Button>
+          <div className="flex justify-between mt-8 bold">
+          Else Continue with Google
+          </div>
+          <Button
+            fullWidth
+            mt="xl"
+            variant="default"
+            className="bg-blue-500 text-white hover:text-black"
+          >
+            Login With Google
           </Button>
         </Paper>
       </Container>

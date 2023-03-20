@@ -17,6 +17,7 @@ import {
   IconReceipt2,
   IconSwitchHorizontal,
   IconLogout,
+  IconUser
 } from "@tabler/icons-react";
 import { MantineLogo } from "@mantine/ds";
 import Link from "next/link";
@@ -106,13 +107,9 @@ const useStyles = createStyles<string, { collapsed?: boolean }>(
 );
 
 const data = [
-  { link: "", label: "Notifications", icon: IconBellRinging },
-  { link: "", label: "Billing", icon: IconReceipt2 },
-  { link: "", label: "Security", icon: IconFingerprint },
-  { link: "", label: "SSH Keys", icon: IconKey },
-  { link: "", label: "Databases", icon: IconDatabaseImport },
-  { link: "", label: "Authentication", icon: Icon2fa },
-  { link: "", label: "Other Settings", icon: IconSettings },
+  { link: "", label: "Dashboard", icon: IconUser },
+  { link: "", label: "Medical Reports", icon: IconReceipt2 },
+  { link: "", label: "Lab Reports", icon: IconFingerprint },
 ];
 
 export const SideNav: FC<{ className?: string }> = ({ className }) => {
@@ -141,7 +138,7 @@ export const SideNav: FC<{ className?: string }> = ({ className }) => {
     <Navbar p="md" className={cx(classes.navbar, className)}>
       <Navbar.Section grow>
         <Group className={classes.header} position="apart">
-          <MantineLogo size={28} />
+          <div className="bold">MediData</div>
           <Code sx={{ fontWeight: 700 }}>v3.1.2</Code>
         </Group>
         {links}

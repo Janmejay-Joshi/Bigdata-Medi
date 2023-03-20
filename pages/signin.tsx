@@ -1,3 +1,4 @@
+import { Signincomp } from "@/components/Signincomp";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import { FooterLinks } from "../components/Footer";
@@ -47,7 +48,7 @@ export default function SignIn() {
       </Head>
       {/* <NavbarSimple /> */}
       <HeaderMegaMenu />
-      <AuthenticationForm />
+      <Signincomp />
       <FooterLinks data={links} />
     </>
   );

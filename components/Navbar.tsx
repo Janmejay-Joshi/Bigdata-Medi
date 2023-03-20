@@ -238,7 +238,7 @@ export function HeaderMegaMenu() {
               <Button variant="default">Log in</Button>
             </Link>
             <Link href="/signin">
-              <Button>Sign up</Button>
+              <Button variant="default" className="bg-blue-500 text-white hover:text-black">Signin</Button>
             </Link>
           </Group>
 
@@ -294,7 +294,7 @@ export function HeaderMegaMenu() {
               <Button variant="default">Log in</Button>
             </Link>
             <Link href="/signin">
-            <Button>Sign up</Button>
+            <Button variant="default" className="">Signin</Button>
             </Link>
           </Group>
         </ScrollArea>
